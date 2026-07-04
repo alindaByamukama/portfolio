@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alinda Byamukama — Data Analyst</title>
+  <meta name="description"
+    content="Alinda Byamukama — data analyst in Kampala working toward data engineering, with cloud (GCP) as the foundation. Python, SQL, Power BI." />
+  <meta name="keywords" content="alindaByamukama, data analyst, data engineering, GCP, python, SQL" />
+
+  <!-- Keep the site out of search engines (does not affect LinkedIn/Twitter link previews) -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Link-preview cards (LinkedIn, Twitter, etc.) -->
+  <meta property="og:url" content="https://alindabyamukama.com/" />
+  <meta property="og:image" content="https://alindabyamukama.com/profile-pic-ng-faceforward.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Alinda Byamukama — Data Analyst" />
+  <meta property="og:description"
+    content="Data analyst in Kampala working toward data engineering, with cloud (GCP) as the foundation. Python, SQL, Power BI." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alinda Byamukama — Data Analyst" />
+  <meta name="twitter:description"
+    content="Data analyst in Kampala working toward data engineering, with cloud (GCP) as the foundation. Python, SQL, Power BI." />
+  <meta name="twitter:image" content="https://alindabyamukama.com/profile-pic-ng-faceforward.png" />
+
+  <link rel="shortcut icon" type="image/png" href="assets/avatar.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #FBF8F3;
+      --ink: #221D17;
+      --muted: #6F6659;
+      --accent: #A8442A;
+      --card: #F2ECE2;
+      --line: #E6DECF;
+      --display: "Fraunces", Georgia, serif;
+      --body: "DM Sans", system-ui, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .wrap {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* ---------- nav ---------- */
+    .nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem 1.75rem;
+      padding: 2rem 0 0;
+      position: relative;
+    }
+
+    .nav-name {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      margin-right: auto;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.35rem;
+      color: var(--ink);
+    }
+
+    /* ---------- views ---------- */
+    main {
+      flex: 1 0 auto;
+    }
+
+    .view[hidden] {
+      display: none;
+    }
+
+    .view {
+      padding: 4.5rem 0 4rem;
+    }
+
+    .view.entering {
+      animation: fade 0.5s ease both;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    h1 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(2rem, 5.5vw, 2.9rem);
+      line-height: 1.12;
+      letter-spacing: -0.015em;
+      margin-bottom: 1.1rem;
+    }
+
+    h1 .accent {
+      color: var(--accent);
+    }
+
+    h2 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      margin-bottom: 1.75rem;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.9rem;
+    }
+
+    /* ---------- home ---------- */
+    .avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.4rem;
+    }
+
+    .lede {
+      color: var(--muted);
+      max-width: 34rem;
+      font-size: 1.1rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .home-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .home-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      padding: 1.5rem 1.4rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 26px 10px 26px 10px;
+      /* fallback shape */
+      text-decoration: none;
+      transition: border-color 0.2s ease, transform 0.2s ease, border-radius 0.3s ease;
+    }
+
+    /* each pebble sits a little differently */
+    .home-nav .home-card:nth-child(1) {
+      border-radius: 28px 10px 24px 12px;
+    }
+
+    .home-nav .home-card:nth-child(2) {
+      border-radius: 10px 26px 12px 24px;
+    }
+
+    .home-nav .home-card:nth-child(3) {
+      border-radius: 24px 12px 28px 10px;
+    }
+
+    .home-nav .home-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      border-radius: 20px;
+      /* settles even on hover */
+    }
+
+    .home-card .label {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+
+    .home-card .desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .home-card .arrow {
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
+    }
+
+    /* ---------- projects ---------- */
+    .project {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 2rem;
+      align-items: start;
+      padding: 2rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .project:last-of-type {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stack {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.55rem;
+    }
+
+    h3 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .project-media {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-media .tile-label {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    .link-btn {
+      font-size: 0.92rem;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1.5px;
+      text-decoration-color: var(--accent);
+    }
+
+    .link-btn:hover {
+      color: var(--accent);
+    }
+
+    .link-btn+.link-btn {
+      margin-left: 1.4rem;
+    }
+
+    /* ---------- resume ---------- */
+    .resume-actions {
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.65rem 1.3rem;
+      background: var(--accent);
+      color: var(--bg);
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .res-block {
+      margin-bottom: 2.75rem;
+    }
+
+    .res-block h4 {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .skills-grid strong {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .skills-grid p {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .role {
+      margin-bottom: 1.75rem;
+    }
+
+    .role-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.3rem;
+    }
+
+    .role-title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 1.05rem;
+    }
+
+    .role-date {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .role-org {
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .role ul {
+      list-style: none;
+    }
+
+    .role li {
+      font-size: 0.92rem;
+      color: var(--muted);
+      padding-left: 1.1rem;
+      position: relative;
+      margin-bottom: 0.25rem;
+    }
+
+    .role li::before {
+      content: "\2014";
+      position: absolute;
+      left: 0;
+      color: var(--line);
+    }
+
+    .edu-item,
+    .cert-item {
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-item strong {
+      font-weight: 500;
+    }
+
+    .edu-item span,
+    .cert-item span {
+      color: var(--muted);
+    }
+
+    /* ---------- contact ---------- */
+    #contact-view .lede {
+      max-width: 34rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-meta {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---------- footer ---------- */
+    footer {
+      flex: none;
+      border-top: 1px solid var(--line);
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      padding: 2rem 0 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner .social a {
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-right: 1.25rem;
+    }
+
+    .footer-inner .social a:hover {
+      color: var(--accent);
+    }
+
+    .footer-inner small {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .view.entering {
+        animation: none;
+      }
+
+      .home-card:hover {
+        transform: none;
+      }
+    }
+
+    /* ---------- mobile ---------- */
+    @media (max-width: 640px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0.25rem;
+        width: 100%;
+        padding-top: 0.75rem;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+      }
+
+      .home-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+      }
+
+      .project-media {
+        order: -1;
+        aspect-ratio: 16 / 9;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .view {
+        padding: 3rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <nav class="nav">
+      <a class="nav-name" href="#home"><span class="dot" aria-hidden="true"></span>Alinda Byamukama</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a data-nav="projects" href="#projects">Projects</a>
+        <a href="https://alindabyamukama.hashnode.dev/" target="_blank" rel="noreferrer">Writing</a>
+        <a data-nav="resume" href="#resume">Resume</a>
+        <a data-nav="contact" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <main class="wrap">
+
+    <!-- ============ HOME ============ -->
+    <section class="view" data-view="home">
+      <!-- <img class="avatar" src="assets/profile-pic-ng-faceforward.png" alt="Portrait of Alinda Byamukama" /> -->
+      <h1>I turn messy data into <span class="accent">clear answers</span>.</h1>
+      <p class="lede">
+        Data analyst in Kampala, working toward data engineering &mdash; with cloud (GCP)
+        as the foundation. Python, SQL, and the occasional AI experiment.
+      </p>
+      <div class="home-nav">
+        <a class="home-card" href="#projects">
+          <span class="label">Projects</span>
+          <span class="desc">Data, cloud, and a bit of AI.</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="home-card" href="#resume">
+          <span class="label">Resume</span>
+          <span class="desc">Where I've worked, what I know.</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="home-card" href="#contact">
+          <span class="label">Contact</span>
+          <span class="desc">Open to data roles and collaboration.</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+      <p style="margin-top:1.75rem">
+        <a class="link-btn" href="https://alindabyamukama.hashnode.dev/" target="_blank" rel="noreferrer">Read my blog
+          on Hashnode &#8599;</a>
+      </p>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="view" data-view="projects" hidden>
+      <span class="eyebrow">Selected work</span>
+      <h2>Projects</h2>
+
+      <article class="project">
+        <div>
+          <span class="stack">GCP &middot; Firebase &middot; Firestore &middot; Gemini</span>
+          <h3>Cowork Caf&eacute; Finder</h3>
+          <p>
+            A caf&eacute;-discovery app for Kampala built at a Google "Build with AI" event.
+            Natural-language search grounded in a curated Firestore dataset &mdash; Gemini maps
+            each query onto real tags rather than inventing them. Firebase hosting,
+            Vertex AI backend, no build step.
+          </p>
+          <a class="link-btn" href="https://cowork-cafe.web.app" target="_blank" rel="noreferrer">See live &#8599;</a>
+          <!-- TODO(alinda): add the cafe repo URL -->
+          <!-- <a class="link-btn" href="#" target="_blank" rel="noreferrer">Source &#8599;</a> -->
+        </div>
+        <div class="project-media"><span class="tile-label">cowork-cafe</span></div>
+      </article>
+
+      <article class="project">
+        <div>
+          <span class="stack">Python &middot; pandas &middot; Jupyter</span>
+          <h3>Global Literacy Analysis</h3>
+          <p>
+            A notebook exploring global literacy across countries and years &mdash; the full
+            workflow from raw data through cleaning, exploration, and visualisation.
+          </p>
+          <a class="link-btn" href="https://github.com/alindaByamukama/global-literacy-analysis" target="_blank"
+            rel="noreferrer">Notebook &#8599;</a>
+        </div>
+        <div class="project-media"><span class="tile-label">Jupyter notebook</span></div>
+      </article>
+
+      <article class="project">
+        <div>
+          <span class="stack">Python &middot; pandas</span>
+          <h3>Female Employment Analysis</h3>
+          <p>
+            An analysis of female employment rates &mdash; cleaning a raw dataset from scratch
+            and building it into a clear visual story.
+          </p>
+          <a class="link-btn" href="https://github.com/alindaByamukama/female_employment_notebook" target="_blank"
+            rel="noreferrer">Notebook &#8599;</a>
+        </div>
+        <div class="project-media"><span class="tile-label">Jupyter notebook</span></div>
+      </article>
+
+      <article class="project">
+        <div>
+          <span class="stack">Python · pandas · pytest · Git</span>
+          <h3>Ugandan Legal Records Dataset</h3>
+          <p>
+            Cleaning and structuring the Kampala Law Reports Subject Index (1989–1999, ~1,443 cases) into an open,
+            queryable
+            dataset — turning a print-layout compilation into one record per case with typed fields for parties, court,
+            year,
+            issue, and holding.
+          </p>
+          <a class="link-btn" href="https://github.com/alindaByamukama/kampala-law-reports-subject-index"
+            target="_blank" rel="noreferrer">Source &#8599;</a>
+          <span class="stack" style="margin-top:.6rem;color:var(--accent)">In progress</span>
+        </div>
+        <div class="project-media"><span class="tile-label">in progress</span></div>
+      </article>
+    </section>
+
+    <!-- ============ RESUME ============ -->
+    <section class="view" data-view="resume" hidden>
+      <span class="eyebrow">Law &rarr; software &rarr; data</span>
+      <h2>Resume</h2>
+      <div class="resume-actions">
+        <a class="btn" href="assets/CV.pdf" target="_blank" rel="noreferrer">Download full CV (PDF)</a>
+      </div>
+
+      <div class="res-block">
+        <h4>Skills</h4>
+        <div class="skills-grid">
+          <div>
+            <strong>Data &amp; analysis</strong>
+            <p>Python (pandas), SQL, Power BI, Excel. Data cleaning, exploration, and documentation.</p>
+          </div>
+          <div>
+            <strong>Cloud &amp; engineering</strong>
+            <p>Google Cloud (Firebase, Firestore, Vertex AI). Databases and API development, Git version control.</p>
+          </div>
+          <div>
+            <strong>Research</strong>
+            <p>Qualitative and quantitative data collection (KoboCollect/ODK), legal research and drafting.</p>
+          </div>
+          <div>
+            <strong>Communication</strong>
+            <p>Technical writing and documentation, stakeholder engagement, cross-functional collaboration.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-block">
+        <h4>Experience</h4>
+
+        <div class="role">
+          <div class="role-head"><span class="role-title">Data Analysis Trainee</span><span class="role-date">02/2026
+              &ndash; 04/2026</span></div>
+          <div class="role-org">Women in Technology Uganda (WITU) &mdash; Kampala</div>
+          <ul>
+            <li>Built hands-on skills in Python (pandas), SQL, Power BI, and Excel through the WITU Data Analysis
+              Program.</li>
+            <li>Completed real-world projects across the full workflow: cleaning, exploration, visualisation, and
+              storytelling.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head"><span class="role-title">Research Assistant &mdash; Justice For Her</span><span
+              class="role-date">10/2025 &ndash; 11/2025</span></div>
+          <div class="role-org">UN Women &mdash; Masaka</div>
+          <ul>
+            <li>Collected qualitative and quantitative data with KoboCollect/ODK under strict accuracy and study
+              protocols.</li>
+            <li>Conducted key-informant and in-depth interviews; managed daily field documentation and data
+              verification.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head"><span class="role-title">Software Development Intern</span><span
+              class="role-date">08/2024 &ndash; 01/2025</span></div>
+          <div class="role-org">Tunga &mdash; Kampala</div>
+          <ul>
+            <li>Delivered responsive React components and designed admin interfaces in Figma.</li>
+            <li>Wrote technical documentation for setup, architecture, and deployment; worked in Git workflows and
+              sprint reviews.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head"><span class="role-title">Backend Microservices Trainee</span><span
+              class="role-date">02/2024 &ndash; 05/2024</span></div>
+          <div class="role-org">Tunga Impact Academy &mdash; Kampala</div>
+          <ul>
+            <li>Built projects with Python and Django; pair-programmed and took part in team code reviews.</li>
+            <li>Learned Docker basics for deployment and environment consistency.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head"><span class="role-title">Junior Software Engineer</span><span class="role-date">09/2022
+              &ndash; 08/2023</span></div>
+          <div class="role-org">Refactory Academy / Agripoint &mdash; Kampala</div>
+          <ul>
+            <li>Designed a warehouse tracking UI in Figma and built the frontend in React.</li>
+            <li>Introduced Git branching workflows and delivered completed products within deadlines.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head"><span class="role-title">Legal Associate</span><span class="role-date">03/2018 &ndash;
+              03/2020</span></div>
+          <div class="role-org">Law &amp; Advocacy for Women in Uganda (LAW-U) &mdash; Kampala</div>
+          <ul>
+            <li>Researched case law and drafted legal research briefs and educational materials.</li>
+            <li>Facilitated community workshops and represented the organisation in stakeholder workshops.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="res-block">
+        <h4>Education</h4>
+        <p class="edu-item"><strong>MSc Web Design and Development</strong> &mdash; UNICAF (UK-accredited), Zambia
+          <span>&middot; expected 12/2026</span>
+        </p>
+        <p class="edu-item"><strong>Bachelor of Laws (LLB)</strong> &mdash; University of London, UK <span>&middot;
+            2017</span></p>
+      </div>
+
+      <div class="res-block">
+        <h4>Certifications</h4>
+        <p class="cert-item">Community-Engaged &amp; Community-Based Participatory Research <span>&mdash; CITI
+            Program</span></p>
+        <p class="cert-item">Backend Microservices with Python <span>&mdash; Tunga Impact Academy</span></p>
+        <p class="cert-item">Certificate in Software Engineering (JavaScript) <span>&mdash; Refactory Academy</span></p>
+        <p class="cert-item">Meta / Andela Front-End Certificate (React)</p>
+        <p class="cert-item">International Computer Driving License (ICDL)</p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="view" data-view="contact" id="contact-view" hidden>
+      <span class="eyebrow">Let's talk</span>
+      <h2>Contact</h2>
+      <p class="lede">
+        Open to data analysis and data-engineering roles, freelance work, and
+        collaboration &mdash; especially with mission-driven teams. I reply to everything.
+      </p>
+      <p class="contact-meta">Kampala &middot; Remote-friendly</p>
+      <a class="btn" href="mailto:alindabyamukama@gmail.com">Send me an email</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="social">
+        <a href="https://ug.linkedin.com/in/alindabyamukama" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/alindaByamukama" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://twitter.com/alindabyamukama" target="_blank" rel="noreferrer">Twitter</a>
+      </div>
+      <small>&copy; 2026 Alinda Byamukama</small>
+    </div>
+  </footer>
+
+  <script>
+    const views = Array.from(document.querySelectorAll('[data-view]'));
+    const ids = views.map(v => v.dataset.view);
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('nav-links');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function show(id) {
+      if (!ids.includes(id)) id = 'home';
+      views.forEach(v => {
+        const active = v.dataset.view === id;
+        v.hidden = !active;
+        if (active && !reduce) {
+          v.classList.remove('entering');
+          void v.offsetWidth;          // restart the enter animation
+          v.classList.add('entering');
+        }
+      });
+      navLinks.forEach(a => a.classList.toggle('active', a.dataset.nav === id));
+      window.scrollTo(0, 0);
+    }
+
+    function route() { show((location.hash.replace('#', '') || 'home')); }
+    window.addEventListener('hashchange', () => { closeMenu(); route(); });
+    route();
+
+    // mobile menu
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+    navToggle.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    navMenu.addEventListener('click', e => { if (e.target.tagName === 'A') closeMenu(); });
+  </script>
+</body>
+
+</html>
