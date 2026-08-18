@@ -4,7 +4,7 @@ Personal portfolio site. A single, zero-build `index.html` positioning me as a d
 
 ## Overview
 
-Static site, no framework, no build step. Everything — markup, styles, and the small amount of JavaScript — lives in one `index.html`. It ships as-is to GitHub Pages.
+Static site, no framework, no build step. Everything — markup, styles, and the small amount of JavaScript — lives in one `index.html`.
 
 The page is a landing-first, multi-view layout: only the home view renders on load, and the nav (plus the home cards) switch between four views without a page reload.
 
@@ -60,28 +60,6 @@ open index.html
 python -m http.server 8000
 # then visit http://localhost:8000
 ```
-
-## Deploy (GitHub Pages)
-
-On a free personal account, **the repo must be public** — GitHub Pages does not publish from private repos without a paid plan.
-
-1. Push this repo to GitHub (public).
-2. Settings → Pages → Build and deployment → Source: **Deploy from a branch**.
-3. Branch: `main`, folder: `/ (root)`. Save.
-4. Wait a few minutes, then visit the URL Pages shows you.
-
-## Customize before publishing
-
-A few values are placeholders and must be set to real ones:
-
-- **Open Graph URL + image** (`<head>`): `og:url` and `og:image` point at `alindabyamukama.com`. If the live site is actually a `github.io` URL, change both — and remember `og:image` needs an **absolute** URL, not a relative `assets/…` path.
-- **Project links**: several `Source ↗` links are `#` placeholders. Fill or remove them; a dead link reads worse than none.
-- **`assets/CV.pdf`**: make sure the current CV is in place (phone number removed).
-
-## Notes
-
-- The page carries `<meta name="robots" content="noindex, nofollow">` — it stays out of search engines but remains reachable by direct link. This does **not** block LinkedIn/Twitter link previews, which read the OG tags directly.
-- The blog link points to `https://alindabyamukama.hashnode.dev/` in both the nav and the hero.
 
 ## License
 
